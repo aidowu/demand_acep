@@ -13,7 +13,7 @@ cor_reg(data)
 This shows a correlation plot and spits out formatted data and a regression model with respect to PQ.
 }
 \examples{
-cor_reg()
+cor_reg("./data/15m_downsampled.csv")
 }
 \keyword{correlation}
 \keyword{regression}

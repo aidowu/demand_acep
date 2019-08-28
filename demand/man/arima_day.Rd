@@ -17,6 +17,6 @@ arima_day(data, meter_name, end_point)
 An ARIMA forecast model in terms of day will be plotted.
 }
 \examples{
-arima_day()
+arima_day(data, "PQ", 404)
 }
 \keyword{ARIMA}

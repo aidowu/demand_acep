@@ -13,7 +13,7 @@ den_compare(data)
 This is for density comparison. Input of data will lead to a plot of two densities.
 }
 \examples{
-den_compare()
+den_compare(data)
 }
 \keyword{demand}
 \keyword{density}

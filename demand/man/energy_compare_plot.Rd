@@ -13,7 +13,7 @@ energy_compare_plot(data)
 This will show a monthly energy consumption plot for the 4 meters.
 }
 \examples{
-energy_compare_plot()
+energy_compare_plot(data)
 }
 \keyword{consumption}
 \keyword{energy}

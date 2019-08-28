@@ -17,6 +17,6 @@ arima_month(data, meter_name, end_point)
 An ARIMA forecast model in terms of month will be plotted.
 }
 \examples{
-arima_month()
+arima_month(data, "PQ", 13)
 }
 \keyword{ARIMA}

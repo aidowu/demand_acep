@@ -13,7 +13,7 @@ monthly_bill(data)
 This shows a monthly bill plot.
 }
 \examples{
-monthly_bill()
+monthly_bill(data)
 }
 \keyword{bill}
 \keyword{monthly}

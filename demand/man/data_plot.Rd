@@ -13,7 +13,7 @@ data_plot(csv_path)
 This is to convert the original csv file to a formatted dataframe.
 }
 \examples{
-data_plot()
+data_plot("./data/tidy_downsampled.csv")
 }
 \keyword{clean}
 \keyword{data}

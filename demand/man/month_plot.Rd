@@ -15,7 +15,7 @@ month_plot(data, meter_name)
 This is to plot in terms of month with respect to meter, group, color and facet.
 }
 \examples{
-month_plot()
+month_plot(data, "PQ")
 }
 \keyword{monthly}
 \keyword{plot}

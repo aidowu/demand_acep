@@ -13,7 +13,7 @@ cost_table(data)
 This is to create a cost table including all the rates.
 }
 \examples{
-cost_table()
+cost_table(data)
 }
 \keyword{charge}
 \keyword{demand}

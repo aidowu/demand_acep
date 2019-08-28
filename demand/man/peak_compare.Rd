@@ -13,7 +13,7 @@ peak_compare(data)
 This is for peak demand comparison. Input is data leading to a plot of peak demand comparison.
 }
 \examples{
-peak_compare()
+peak_compare(data)
 }
 \keyword{demand}
 \keyword{peak}

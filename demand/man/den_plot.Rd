@@ -15,6 +15,6 @@ den_plot(data, meter_name)
 A density plot will be plotted of a specified meter.
 }
 \examples{
-den_plot()
+den_plot(data, "PQ")
 }
 \keyword{density}

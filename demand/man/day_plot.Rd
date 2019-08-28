@@ -21,7 +21,7 @@ day_plot(data, meter_name, group_name, color_name, facet_name)
 This is to plot in terms of day with respect to meter, group, color and facet.
 }
 \examples{
-day_plot()
+day_plot(data, "PQ", "month", "month", "day")
 }
 \keyword{daily}
 \keyword{plot}

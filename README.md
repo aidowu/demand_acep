@@ -5,7 +5,7 @@
 
 
 ## Overview 
-The `demand_acep` package implements a data-pipeline. The data-pipeline performs three tasks - Extraction, Transformation and Loading (ETL). 
+The `demand_acep` package implements a data-pipeline. The data-pipeline performs three tasks - Extraction, Transformation and Loading (ETL). The detailed documentation is [here](https://demand-acep.readthedocs.io/en/latest/) and a brief summary is as under:
 
 * **Extract**: The high-resolution (~7 Hz) power meter data for each meter and each channel is read from the NetCDF files to a pandas dataframe. 
 * **Transform**: The data is down-sampled to a lower resolution (1 minute default), missing data is filled, individual channel data is combined with other channels to create a dataframe down-sampled, filled dataframe per day per meter, and this dataframe is exported to a csv file. So, we have for each day of data, a csv file for each meter containing the data for all channels at a lower resolution. 
@@ -13,7 +13,7 @@ The `demand_acep` package implements a data-pipeline. The data-pipeline performs
 
 <img src="https://github.com/demand-consults/demand_acep/blob/master/doc/source/_static/demand_acep_poster_DIRECT_final.jpg" width="80%">
 
-All or some steps can be re-used or repeated as desired. Further analysis using the complete data was performed and results have been in presented in the documentation. 
+All or some steps can be re-used or repeated as desired. Further analysis using the complete data was performed and results have been in presented in the [documentation](https://demand-acep.readthedocs.io/en/latest/). 
 
 
 ## Installation
@@ -54,6 +54,49 @@ The module supports TDD and includes setup for automatic test runner. To begin d
 * From the root directory of the package, i.e. here, run `grunt doc`. This command watches for changes in the `.rst` files in the `doc` folder and runs `make html`. This has the effect of building your documenation on each save. 
 * To view the changes, it is suggested to run a local webserver. This can be done by first installing a webserver with `pip install sauth`, and then running the webserver like so: `sauth <username> <password> localhost <port>` from the `doc` folder in a separate terminal window. Specify a username, password and a port number, for example - 8000. Then navigate to: [http://localhost:8000](http://localhost:8000) in your web-browser and enter the username and password you set while running `sauth`. The live changes to the documentation can be viewed by navigating to the `html` folder in the `build` directory located at `doc\build\html`. 
 * As you make changes to the documentation in the `.rst` files, and re-save them, `grunt doc` automatically updates the `html` folder and changes can be viewed in the browser by refreshing it. 
+
+
+## Using R package `demand` for demand charge saving analysis
+
+An R package creates diverse plots per day, weekday, month and year for peak demand power consumption of several meters to support this project. These plots lead to benefit-cost analyses and cost saving plots. In addition, this package forecasts peak power demand using ARIMA on a daily and monthly basis. Correlation and a simple regression are also included. 
+
+To use ths package, follow the steps:
+
+1. Install `devtools`
+```
+install.packages("devtools")
+```
+
+2. Load the package 
+```
+library(devtools)
+```
+
+3. Install this package `demand`
+```
+install_github("reconjohn/demand")
+```
+
+4. Load the package 
+```
+library(demand)
+```
+
+Now you are all set!
+
+**Brief description of demand charge using R package, `demand`**
+
+Using R package `demand`, peak demand, correlation, forecast, and demand charge were plotted. Refer to the followings for more details about demonstration of code from `demand` package and its results. 
+
+* Peak demand plot for the 4 meters  [here](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/plots.md) and 
+[code](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/plots.Rmd)
+
+* Peak demand correlation and forecasts [here](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/forecast.md) and 
+[code](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/forecast.Rmd)
+
+* Demand charge reduction by implementing a virtual meter [here](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/charge_filled.md) and
+[code](https://github.com/demand-consults/demand_acep/blob/master/demand/scripts/charge_filled.Rmd)
+
 
 
 ## Release History

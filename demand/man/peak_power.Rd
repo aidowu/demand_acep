@@ -15,7 +15,7 @@ peak_power(data, meter_name)
 This is for a monthly peak power trend. Inputs of data and meter, it will generate a plot.
 }
 \examples{
-peak_power()
+peak_power(data, "PQ")
 }
 \keyword{peak}
 \keyword{power}

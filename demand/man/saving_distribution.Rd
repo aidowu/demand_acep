@@ -13,7 +13,7 @@ saving_distribution(data)
 This leads to a plot of saving distribution.
 }
 \examples{
-saving_distribution()
+saving_distribution(data)
 }
 \keyword{distribution}
 \keyword{saving}
